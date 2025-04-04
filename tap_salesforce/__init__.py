@@ -58,14 +58,10 @@ def get_replication_key(sobject_name, fields):
 
     fields_list = [f['name'] for f in fields]
 
-    if 'SystemModstamp' in fields_list:
-        return 'SystemModstamp'
-    elif 'LastModifiedDate' in fields_list:
+    if 'LastModifiedDate' in fields_list:
         return 'LastModifiedDate'
     elif 'CreatedDate' in fields_list:
         return 'CreatedDate'
-    elif 'LoginTime' in fields_list and sobject_name == 'LoginHistory':
-        return 'LoginTime'
     return None
 
 def stream_is_selected(mdata):
