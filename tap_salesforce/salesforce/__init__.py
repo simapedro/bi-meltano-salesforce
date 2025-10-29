@@ -246,7 +246,7 @@ class Salesforce():
         self.select_fields_by_default = select_fields_by_default is True or (isinstance(select_fields_by_default, str) and select_fields_by_default.lower() == 'true')
         self.rest_requests_attempted = 0
         self.jobs_completed = 0
-        self.data_url = "{}/services/data/v60.0/{}"
+        self.data_url = "{}/services/data/v65.0/{}"
         self.pk_chunking = False
 
         self.auth = SalesforceAuth.from_credentials(credentials, is_sandbox=self.is_sandbox)
