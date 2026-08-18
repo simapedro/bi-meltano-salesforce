@@ -58,8 +58,8 @@ def get_replication_key(sobject_name, fields):
 
     fields_list = [f['name'] for f in fields]
 
-    if 'LastModifiedDate' in fields_list:
-        return 'LastModifiedDate'
+    if 'SystemModstamp' in fields_list:
+        return 'SystemModstamp'
     elif 'CreatedDate' in fields_list:
         return 'CreatedDate'
     return None
